@@ -1,0 +1,11 @@
+{
+  "colors": {
+    "primary": "#115B73",
+    "secondary": "#CBF2FC",
+    "pink_accent": "#EDD0F5",
+    "brown_accent": "#D5A792",
+    "background_accent": "#F2F7F8",
+    "background": "#FFFFFF"
+  },
+  "notes": "Edit light/dark objects with hex, oklch, or any CSS color string. Add keys as needed (primary, muted, border, etc.). Agents should mirror values into src/app/globals.css when implementing UI."
+}

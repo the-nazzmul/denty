@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# markdown (only README.md files stay tracked)
+*.md
+!README.md
+
+.cursor/
