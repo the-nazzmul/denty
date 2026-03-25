@@ -40,8 +40,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# markdown (only README.md files stay tracked)
+# Markdown: only README.md is tracked
 *.md
 !README.md
+
+# Local palette (keep out of remote)
+design-tokens.json
 
 .cursor/
