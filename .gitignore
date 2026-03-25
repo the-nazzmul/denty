@@ -47,4 +47,7 @@ next-env.d.ts
 # Local palette (keep out of remote)
 design-tokens.json
 
+# Local design reference (not for remote)
+public/reference-image.webp
+
 .cursor/
