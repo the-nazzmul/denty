@@ -20,7 +20,7 @@ export function HeroSection() {
   return (
     <Section
       id="hero"
-      className="overflow-x-clip pt-8 pb-12 sm:pt-12 sm:pb-16 min-h-screen"
+      className="overflow-x-clip min-h-screen sm:min-h-[calc(100svh-4.5rem)] flex flex-col items-stretch justify-center py-0 sm:py-0"
     >
       <div className="grid min-w-0 gap-6 lg:grid-cols-2 lg:gap-8 xl:gap-10">
         {/* Reference: left column is a large tinted “card” */}
