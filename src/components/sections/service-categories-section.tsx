@@ -34,10 +34,10 @@ export function ServiceCategoriesSection() {
           <Card
             key={cat.title}
             className={cn(
-              "min-w-0 overflow-hidden border-0 shadow-md ring-1 ring-border/60",
+              "min-w-0 overflow-hidden border-0 shadow-md ring-1 ring-border/60 p-0",
               "accent" in cat &&
                 cat.accent === "pink" &&
-                "bg-pink-accent/40 ring-pink-accent/30"
+                "bg-pink-accent/40 ring-pink-accent/30",
             )}
           >
             <div className="relative aspect-[5/3] w-full bg-muted">
@@ -50,7 +50,9 @@ export function ServiceCategoriesSection() {
               />
             </div>
             <CardHeader>
-              <CardTitle className="font-heading text-lg">{cat.title}</CardTitle>
+              <CardTitle className="font-heading text-lg">
+                {cat.title}
+              </CardTitle>
               <CardDescription>{cat.description}</CardDescription>
             </CardHeader>
             <CardFooter className="justify-end border-0 bg-transparent pt-0">

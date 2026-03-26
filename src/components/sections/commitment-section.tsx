@@ -25,20 +25,22 @@ export function CommitmentSection() {
           <p className="text-sm font-medium text-muted-foreground">
             Our promise
           </p>
-          <h2 className="font-heading text-2xl font-bold text-foreground sm:text-3xl">
+          <h2 className="font-heading text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
             Committed to your oral health
           </h2>
-          <p className="text-muted-foreground">
-            We combine clinical excellence with a calm environment so every visit
-            feels straightforward and supportive.
+          <p className="text-muted-foreground text-sm leading-relaxed sm:text-base lg:text-lg">
+            We combine clinical excellence with a calm environment so every
+            visit feels straightforward and supportive.
           </p>
           <ul className="space-y-3">
             {points.map((text) => (
-              <li key={text} className="flex gap-3">
+              <li key={text} className="flex gap-3 lg:gap-4">
                 <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-secondary text-primary">
                   <Check className="size-3.5" aria-hidden />
                 </span>
-                <span className="text-foreground">{text}</span>
+                <span className="text-foreground text-sm sm:text-[0.95rem] lg:text-[1.05rem]">
+                  {text}
+                </span>
               </li>
             ))}
           </ul>

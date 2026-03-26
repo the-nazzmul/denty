@@ -14,7 +14,7 @@ export const navLinks = [
 
 /** Nav-linked section ids in document order (scroll-spy + active styles). */
 export const navSectionIds: readonly string[] = navLinks.map((l) =>
-  l.href.slice(1)
+  l.href.slice(1),
 );
 
 export const hero = {
@@ -43,7 +43,7 @@ export const servicesList = [
 export const serviceCategories = [
   {
     title: "General dentistry",
-    description: "Checkups, hygiene, and prevention for the whole family.",
+    description: "Checkups and prevention for the whole family.",
   },
   {
     title: "Cosmetic dentistry",
@@ -65,17 +65,20 @@ export const experts = [
 
 export const testimonials = [
   {
-    quote: "The team made me feel at ease from the first visit. Clear explanations and gentle care.",
+    quote:
+      "The team made me feel at ease from the first visit. Clear explanations and gentle care.",
     author: "Marcus L.",
     role: "Patient since 2022",
   },
   {
-    quote: "Booking online was simple and the clinic runs on time. Highly recommend.",
+    quote:
+      "Booking online was simple and the clinic runs on time. Highly recommend.",
     author: "Jordan K.",
     role: "New patient",
   },
   {
-    quote: "Professional, spotless, and friendly. My whole family comes here now.",
+    quote:
+      "Professional, spotless, and friendly. My whole family comes here now.",
     author: "Daniel R.",
     role: "Family plan",
   },

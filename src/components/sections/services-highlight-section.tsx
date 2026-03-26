@@ -5,13 +5,6 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { servicesList } from "@/data/home-content";
 
 export function ServicesHighlightSection() {
@@ -22,12 +15,12 @@ export function ServicesHighlightSection() {
       contained={false}
     >
       <Container>
-        <div className="grid min-w-0 gap-8 sm:gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
+        <div className="grid min-w-0 gap-8 sm:gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-14">
           <div className="min-w-0 space-y-3">
             <p className="text-sm font-medium text-muted-foreground">
               What we offer
             </p>
-            <h2 className="font-heading text-2xl font-bold text-foreground sm:text-3xl">
+            <h2 className="font-heading text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
               Care built around your smile
             </h2>
             <ul className="space-y-2 pt-2">
@@ -48,35 +41,41 @@ export function ServicesHighlightSection() {
             </ul>
           </div>
 
-          <Card className="min-w-0 overflow-hidden border-0 bg-card shadow-md ring-1 ring-border/60">
-            <div className="relative aspect-video w-full bg-muted">
-              <Image
-                src="/assets/consultation.jpg"
-                alt="Online dental consultation"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 40vw, 100vw"
-              />
+          <div className="min-w-0 overflow-hidden rounded-2xl bg-card shadow-md ring-1 ring-border/60">
+            <div className="grid h-full grid-cols-2 items-stretch">
+              {/* Left: image */}
+              <div className="relative h-full w-full bg-muted overflow-hidden">
+                <Image
+                  src="/assets/consultation.jpg"
+                  alt="Online dental consultation"
+                  fill
+                  className="object-cover object-bottom scale-[1.06]"
+                />
+              </div>
+
+              {/* Right: text + CTA */}
+              <div className="flex h-full flex-col justify-center">
+                <div className="space-y-4 p-6 sm:p-7">
+                  <Badge className="w-fit rounded-full bg-primary text-primary-foreground">
+                    <Shield className="mr-1 size-3" aria-hidden />
+                    Safe &amp; protected
+                  </Badge>
+                  <h3 className="font-heading text-2xl leading-tight sm:text-3xl">
+                    Online consultation
+                  </h3>
+                  <p className="text-base leading-relaxed text-muted-foreground">
+                    Speak with our team from home. We&apos;ll guide next steps
+                    and scheduling.
+                  </p>
+                  <div>
+                    <Button className="w-full sm:w-auto" asChild>
+                      <a href="#cta">Book a video consult</a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <CardHeader className="space-y-3">
-              <Badge className="w-fit rounded-full bg-primary text-primary-foreground">
-                <Shield className="mr-1 size-3" aria-hidden />
-                Safe &amp; protected
-              </Badge>
-              <CardTitle className="font-heading text-xl sm:text-2xl">
-                Online consultation
-              </CardTitle>
-              <CardDescription className="text-base">
-                Speak with our team from home. We&apos;ll guide next steps and
-                scheduling.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="pb-6">
-              <Button className="w-full sm:w-auto" asChild>
-                <a href="#cta">Book a video consult</a>
-              </Button>
-            </CardContent>
-          </Card>
+          </div>
         </div>
       </Container>
     </Section>
