@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <ServicesHighlightSection />
       <CommitmentSection />
+      <ServicesHighlightSection />
       <ServiceCategoriesSection />
       <ExpertsSection />
       <TestimonialsSection />

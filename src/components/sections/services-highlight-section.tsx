@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ChevronRight, Shield } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
@@ -21,8 +22,8 @@ export function ServicesHighlightSection() {
       contained={false}
     >
       <Container>
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
-          <div className="space-y-3">
+        <div className="grid min-w-0 gap-8 sm:gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
+          <div className="min-w-0 space-y-3">
             <p className="text-sm font-medium text-muted-foreground">
               What we offer
             </p>
@@ -47,12 +48,15 @@ export function ServicesHighlightSection() {
             </ul>
           </div>
 
-          <Card className="overflow-hidden border-0 bg-card shadow-md ring-1 ring-border/60">
-            <div className="relative aspect-video bg-muted">
-              {/* Placeholder “video call” tile — swap for real media later */}
-              <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">
-                Online consultation preview
-              </div>
+          <Card className="min-w-0 overflow-hidden border-0 bg-card shadow-md ring-1 ring-border/60">
+            <div className="relative aspect-video w-full bg-muted">
+              <Image
+                src="/assets/consultation.jpg"
+                alt="Online dental consultation"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+              />
             </div>
             <CardHeader className="space-y-3">
               <Badge className="w-fit rounded-full bg-primary text-primary-foreground">

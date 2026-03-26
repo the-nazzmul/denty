@@ -1,6 +1,14 @@
+import Image from "next/image";
 import { Check } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
+
+const commitmentImages = [
+  "/assets/commitment-1.jpg",
+  "/assets/commitment-2.jpg",
+  "/assets/commitment-3.jpg",
+  "/assets/commitment-4.jpg",
+] as const;
 
 const points = [
   "Evidence-based treatment plans",
@@ -12,8 +20,8 @@ const points = [
 export function CommitmentSection() {
   return (
     <Section id="commitment">
-      <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
-        <div className="space-y-5">
+      <div className="grid min-w-0 gap-8 sm:gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
+        <div className="min-w-0 space-y-4 sm:space-y-5">
           <p className="text-sm font-medium text-muted-foreground">
             Our promise
           </p>
@@ -36,12 +44,43 @@ export function CommitmentSection() {
           </ul>
         </div>
 
-        {/* Image collage placeholder — replace with real photography */}
-        <div className="grid grid-cols-2 gap-3 sm:gap-4">
-          <div className="aspect-[4/5] rounded-2xl bg-muted ring-1 ring-border/60" />
-          <div className="mt-8 aspect-[4/5] rounded-2xl bg-muted ring-1 ring-border/60" />
-          <div className="-mt-6 aspect-[4/5] rounded-2xl bg-muted ring-1 ring-border/60" />
-          <div className="aspect-[4/5] rounded-2xl bg-muted ring-1 ring-border/60" />
+        <div className="grid min-w-0 grid-cols-2 gap-2 sm:gap-3 md:gap-4">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-xl ring-1 ring-border/60 sm:rounded-2xl">
+            <Image
+              src={commitmentImages[0]}
+              alt="Dental care"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 25vw, 45vw"
+            />
+          </div>
+          <div className="relative mt-6 aspect-[4/5] overflow-hidden rounded-xl ring-1 ring-border/60 sm:mt-10 sm:rounded-2xl md:mt-12">
+            <Image
+              src={commitmentImages[1]}
+              alt="Dental treatment"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 25vw, 45vw"
+            />
+          </div>
+          <div className="relative -mt-4 aspect-[4/5] overflow-hidden rounded-xl ring-1 ring-border/60 sm:-mt-6 sm:rounded-2xl md:-mt-8">
+            <Image
+              src={commitmentImages[2]}
+              alt="Clinic environment"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 25vw, 45vw"
+            />
+          </div>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-xl ring-1 ring-border/60 sm:rounded-2xl">
+            <Image
+              src={commitmentImages[3]}
+              alt="Patient care"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 25vw, 45vw"
+            />
+          </div>
         </div>
       </div>
     </Section>

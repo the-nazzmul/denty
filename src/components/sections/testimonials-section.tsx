@@ -7,18 +7,18 @@ import { testimonials } from "@/data/home-content";
 export function TestimonialsSection() {
   return (
     <Section id="testimonials">
-      <div className="mx-auto mb-10 max-w-2xl text-center">
+      <div className="mx-auto mb-8 max-w-2xl px-1 text-center sm:mb-10">
         <p className="text-sm font-medium text-muted-foreground">Stories</p>
         <h2 className="mt-2 font-heading text-2xl font-bold text-foreground sm:text-3xl">
           Healing stories
         </h2>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((t) => (
           <Card
             key={t.author}
-            className="border-0 bg-card shadow-md ring-1 ring-border/60"
+            className="min-w-0 border-0 bg-card shadow-md ring-1 ring-border/60"
           >
             <CardHeader>
               <Quote

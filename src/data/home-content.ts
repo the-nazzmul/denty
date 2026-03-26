@@ -1,13 +1,21 @@
 /** Placeholder copy and nav config for the landing page (iterate per section later). */
 
+/**
+ * In-page nav — each `href` must match a real `id` on the page.
+ * Order must match **top-to-bottom** section order in `app/page.tsx` for scroll-spy.
+ */
 export const navLinks = [
   { href: "#hero", label: "Home" },
   { href: "#commitment", label: "About" },
   { href: "#services-highlight", label: "Services" },
   { href: "#experts", label: "Doctors" },
   { href: "#cta", label: "Appointments" },
-  { href: "#footer", label: "Contact" },
 ] as const;
+
+/** Nav-linked section ids in document order (scroll-spy + active styles). */
+export const navSectionIds: readonly string[] = navLinks.map((l) =>
+  l.href.slice(1)
+);
 
 export const hero = {
   ratingLabel: "5.0 (2k reviews)",
@@ -58,7 +66,7 @@ export const experts = [
 export const testimonials = [
   {
     quote: "The team made me feel at ease from the first visit. Clear explanations and gentle care.",
-    author: "Alex M.",
+    author: "Marcus L.",
     role: "Patient since 2022",
   },
   {
@@ -68,7 +76,7 @@ export const testimonials = [
   },
   {
     quote: "Professional, spotless, and friendly. My whole family comes here now.",
-    author: "Priya S.",
+    author: "Daniel R.",
     role: "Family plan",
   },
 ] as const;

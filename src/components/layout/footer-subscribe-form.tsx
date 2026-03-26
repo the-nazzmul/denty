@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 export function FooterSubscribeForm() {
   return (
     <form
-      className="flex max-w-md flex-col gap-2 sm:flex-row"
+      className="flex min-w-0 max-w-md flex-col gap-2 sm:flex-row"
       onSubmit={(e) => {
         e.preventDefault();
       }}
@@ -15,7 +15,7 @@ export function FooterSubscribeForm() {
           type="email"
           name="email"
           placeholder="Email address"
-          className="h-11 border-primary-foreground/25 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50"
+          className="h-11 min-w-0 border-primary-foreground/25 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 sm:flex-1"
         />
         <Button
           type="submit"

@@ -17,10 +17,13 @@ const social = [
 
 export function SiteFooter() {
   return (
-    <footer id="footer" className="bg-primary text-primary-foreground">
-      <Container className="py-14 sm:py-16">
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_2fr]">
-          <div className="space-y-4">
+    <footer
+      id="footer"
+      className="scroll-mt-[5.5rem] bg-primary text-primary-foreground"
+    >
+      <Container className="min-w-0 py-12 sm:py-14 md:py-16">
+        <div className="grid min-w-0 gap-10 lg:grid-cols-[1.2fr_2fr]">
+          <div className="min-w-0 space-y-4">
             <Link href="#hero" className="inline-block">
               <Image
                 src="/denty-logo-text.png"
@@ -48,9 +51,9 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-3">
+          <div className="grid min-w-0 grid-cols-2 gap-8 sm:grid-cols-3">
             {footerColumns.map((col) => (
-              <div key={col.title}>
+              <div key={col.title} className="min-w-0">
                 <p className="mb-3 text-sm font-semibold">{col.title}</p>
                 <ul className="space-y-2 text-sm text-primary-foreground/85">
                   {col.links.map((item) => (

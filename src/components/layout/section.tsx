@@ -23,7 +23,10 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn("py-14 sm:py-20", className)}
+      className={cn(
+        "scroll-mt-[5.5rem] py-14 sm:py-20",
+        className
+      )}
       {...props}
     >
       {contained ? <Container>{children}</Container> : children}

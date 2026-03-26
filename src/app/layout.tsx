@@ -39,9 +39,9 @@ export default function RootLayout({
       className={`${roboto.variable} ${robotoMono.variable} light h-full antialiased`}
       data-theme="light"
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col overflow-x-hidden">
         <SiteHeader />
-        <main className="flex-1">{children}</main>
+        <main className="min-w-0 flex-1">{children}</main>
         <SiteFooter />
       </body>
     </html>
