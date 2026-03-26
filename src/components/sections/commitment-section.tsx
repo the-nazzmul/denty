@@ -11,10 +11,11 @@ const commitmentImages = [
 ] as const;
 
 const points = [
-  "Evidence-based treatment plans",
-  "Sterile instruments and modern suites",
-  "Insurance-friendly billing support",
-  "Gentle care for anxious patients",
+  "Advanced Dental Care For Every Smile",
+  "Personalized Treatments Tailored To You",
+  "Modern Technology For Better Results",
+  "Comfort, Safety, And Quality Guaranteed",
+  "Your Smile, Our Responsibility",
 ] as const;
 
 export function CommitmentSection() {
@@ -22,15 +23,14 @@ export function CommitmentSection() {
     <Section id="commitment">
       <div className="grid min-w-0 gap-8 sm:gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
         <div className="min-w-0 space-y-4 sm:space-y-5">
-          <p className="text-sm font-medium text-muted-foreground">
-            Our promise
-          </p>
-          <h2 className="font-heading text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
-            Committed to your oral health
+          <h2 className="font-heading text-2xl font-bold text-foreground sm:text-3xl lg:text-6xl">
+            Committed To Your Oral Health
           </h2>
           <p className="text-muted-foreground text-sm leading-relaxed sm:text-base lg:text-lg">
-            We combine clinical excellence with a calm environment so every
-            visit feels straightforward and supportive.
+            We strive to provide exceptional dental care through advanced
+            technology, personalized treatments, and a compassionate approach,
+            ensuring your oral health is always our top priority for a brighter,
+            healthier smile.
           </p>
           <ul className="space-y-3">
             {points.map((text) => (

@@ -1,18 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MessageCircle, Send, Share2, Video } from "lucide-react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 import { Container } from "@/components/layout/container";
 import { FooterSubscribeForm } from "@/components/layout/footer-subscribe-form";
 import { Separator } from "@/components/ui/separator";
 import { footerColumns } from "@/data/home-content";
 
-/* Lucide dropped many brand icons; generic glyphs stand in until you add SVGs. */
 const social = [
-  { icon: Share2, label: "Social" },
-  { icon: MessageCircle, label: "Messages" },
-  { icon: Video, label: "Video" },
-  { icon: Send, label: "Newsletter" },
+  { Icon: FaFacebookF, label: "Facebook", href: "#" },
+  { Icon: FaInstagram, label: "Instagram", href: "#" },
+  { Icon: FaXTwitter, label: "X", href: "#" },
+  { Icon: FaLinkedinIn, label: "LinkedIn", href: "#" },
 ] as const;
 
 export function SiteFooter() {
@@ -38,14 +42,14 @@ export function SiteFooter() {
             </p>
             <FooterSubscribeForm />
             <div className="flex gap-2 pt-2">
-              {social.map(({ icon: Icon, label }) => (
+              {social.map(({ Icon, label, href }) => (
                 <a
                   key={label}
-                  href="#"
+                  href={href}
                   aria-label={label}
                   className="inline-flex size-10 items-center justify-center rounded-full border border-primary-foreground/25 bg-primary-foreground/10 transition-colors hover:bg-primary-foreground/20"
                 >
-                  <Icon className="size-4" />
+                  <Icon className="size-[18px]" aria-hidden />
                 </a>
               ))}
             </div>

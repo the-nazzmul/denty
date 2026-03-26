@@ -39,7 +39,7 @@ export function ExpertsSection() {
                 sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 100vw"
                 // Mobile: slightly zoomed-out + top-aligned to avoid cutting the head.
                 // Desktop: keep the tighter crop.
-                className="object-cover object-top scale-[0.98] sm:scale-[1.07]"
+                className="object-cover object-top  sm:scale-[1.07]"
               />
             </div>
 

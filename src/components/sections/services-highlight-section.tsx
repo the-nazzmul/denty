@@ -20,7 +20,7 @@ export function ServicesHighlightSection() {
             <p className="text-sm font-medium text-muted-foreground">
               What we offer
             </p>
-            <h2 className="font-heading text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
+            <h2 className="font-heading text-2xl font-bold text-foreground sm:text-3xl lg:text-5xl">
               Care built around your smile
             </h2>
             <ul className="space-y-2 pt-2">

@@ -1,7 +1,12 @@
 import { Quote } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import { testimonials } from "@/data/home-content";
 
 export function TestimonialsSection() {
@@ -18,7 +23,7 @@ export function TestimonialsSection() {
         {testimonials.map((t) => (
           <Card
             key={t.author}
-            className="min-w-0 border-0 bg-card shadow-md ring-1 ring-border/60"
+            className="grid grid-rows-3 border-0 bg-card shadow-md ring-1 ring-border/60"
           >
             <CardHeader>
               <Quote
@@ -30,11 +35,11 @@ export function TestimonialsSection() {
               <p className="text-sm text-muted-foreground sm:text-base">
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <div>
-                <p className="text-sm font-medium text-foreground">{t.author}</p>
-                <p className="text-sm text-muted-foreground">{t.role}</p>
-              </div>
             </CardContent>
+            <CardFooter className="">
+              <p className="text-sm font-medium text-foreground">{t.author}</p>
+              <p className="text-sm text-muted-foreground">{t.role}</p>
+            </CardFooter>
           </Card>
         ))}
       </div>
