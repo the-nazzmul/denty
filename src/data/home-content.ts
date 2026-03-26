@@ -18,18 +18,18 @@ export const navSectionIds: readonly string[] = navLinks.map((l) =>
 );
 
 export const hero = {
-  ratingLabel: "5.0 (2k reviews)",
-  title: "Exceptional dental care, every step of the way.",
+  ratingLabel: "5.0 (4824 Reviews)",
+  title: "Exceptional Dental Care, Every Step Of The Way",
   description:
-    "From routine checkups to advanced treatment, Denty combines experienced clinicians with a calm, modern experience.",
+    "Your smile deserves the best. Experience advanced dental solutions with a gentle touch, tailored for your comfort.",
   stats: [
-    { value: "200+", label: "Expert doctors" },
-    { value: "400+", label: "Regular patients" },
-    { value: "99%", label: "Satisfied rate" },
+    { value: "200+", label: "Expert Doctors" },
+    { value: "400+", label: "Recover Patient" },
+    { value: "98%", label: "Satisfied Rate" },
   ],
   floatCards: [
-    { title: "24/7 service", subtitle: "We are here when you need us" },
-    { title: "Best doctors", subtitle: "Find the right specialist" },
+    { title: "24/7 Service Available", subtitle: "" },
+    { title: "Find The Best Doctors", subtitle: "" },
   ],
 } as const;
 
